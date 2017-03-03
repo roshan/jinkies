@@ -23,7 +23,6 @@ function replaceJiraTicketWithUrl(obj) {
 	return obj
       }
     } else {
-      console.log(githubUrl + " did not match " + document.location.hostname);
     }
 
   })
