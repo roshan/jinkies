@@ -8,6 +8,10 @@ function replaceJiraTicketWithUrlJs(elem) {
       var githubUrl = items.githubUrl;
       var jiraUrl = items.jiraUrl;
 
+      if ((githubUrl.trim().length == 0) || (jiraUrl.trim().length == 0)) {
+        return;
+      }
+
       var jiraSearchUrl = jiraUrl + "/secure/QuickSearch.jspa?searchString=";
 
     replaced = elem.innerHTML.replace(/[A-Z]+-[0-9]+/g, "<a href='"+jiraSearchUrl+"$&'>$&</a>");

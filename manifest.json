@@ -3,11 +3,11 @@
   
   "name": "Jinkies",
   "description": "This extension makes JIRA project references linkable.",
-  "version": "0.3",
+  "version": "0.4",
 
   "content_scripts": [
     {
-      "matches": ["https://git.liveramp.net/*"],
+      "matches": ["https://*/*"],
       "css": ["jinkies.css"],
       "js": ["jinkies.js"]
     }
@@ -15,8 +15,12 @@
 
   "permissions": [
     "activeTab",
-    "https://*/*",
     "storage"
+  ],
+
+  "optional_permissions": [
+    "activeTab",
+    "https://*/*"
   ],
 
   "options_page": "options.html"
