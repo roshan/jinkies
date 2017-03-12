@@ -23,16 +23,7 @@ function save_options() {
     }, 750);
   });
 
-  chrome.storage.sync.get({
-      githubUrl: '',
-      jiraUrl: ''
-    }, function(items) {
-      var githubUrl = items.githubUrl;
-      var jiraUrl = items.jiraUrl;
-      document.getElementById('github-url').value = githubUrl;
-      document.getElementById('jira-url').value = jiraUrl;
-  });
-
+  restore_options();
 }
 
 // Restores select box and checkbox state using the preferences
