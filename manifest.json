@@ -2,7 +2,7 @@
   "manifest_version": 2,
   
   "name": "Jinkies",
-  "description": "This extension makes JIRA project references linkable.",
+  "description": "This extension makes JIRA project references linkable",
   "version": "0.3",
 
   "content_scripts": [
