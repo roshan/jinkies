@@ -14,13 +14,7 @@
   ],
 
   "permissions": [
-    "activeTab",
     "storage"
-  ],
-
-  "optional_permissions": [
-    "activeTab",
-    "https://*/*"
   ],
 
   "options_page": "options.html"

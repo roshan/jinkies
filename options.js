@@ -11,24 +11,6 @@ function save_options() {
     jiraUrl = jiraUrl + '/';
   }
 
-  var permissionsUrl = githubUrl + "*";
-
-  chrome.permissions.remove({
-    permissions: ['activeTab'],
-    origins: ['https://*/*']
-  }, function(remove) { });
-
-  chrome.permissions.request({
-    permissions: ['activeTab'],
-    origins: [permissionsUrl]
-  }, function(granted) {
-    if (granted) {
-      console.log("granted permissions to " + permissionsUrl);
-    } else {
-      alert("Could not get permissions to " + permissionsUrl);
-    }
-  });
-
   chrome.storage.sync.set({
     githubUrl: githubUrl,
     jiraUrl: jiraUrl
