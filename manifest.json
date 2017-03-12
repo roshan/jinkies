@@ -3,7 +3,7 @@
   
   "name": "Jinkies",
   "description": "This extension makes JIRA project references linkable.",
-  "version": "0.2",
+  "version": "0.3",
 
   "content_scripts": [
     {
